@@ -43,7 +43,7 @@ class App extends React.Component {
       });
     } else if (data.cod === "404") {
       this.setState({
-        error: "City not in our database, sorry..."
+        error: alert("City not in our database, sorry...")
       })
     } 
     else {
@@ -56,7 +56,7 @@ class App extends React.Component {
       sunrise: undefined,
       sunset: undefined,
       description: undefined,
-      error: 'Please enter a proper city name!'
+      error: alert('Please enter a proper city name!')
     });
     }
   }
