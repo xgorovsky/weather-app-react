@@ -7,7 +7,6 @@ import Footer from './components/Footer';
 
 /* LINKS:
 API: https://home.openweathermap.org/ @biedrawa.igor
-tutorial: https://www.youtube.com/watch?v=204C9yNeOYI
 */
 
 const API_KEY = "3d07ac3e7716f1c5fa32f30e69812237";
@@ -43,6 +42,14 @@ class App extends React.Component {
       });
     } else if (data.cod === "404") {
       this.setState({
+        temperature: undefined,
+        city: undefined,
+        country: undefined,
+        humidity: undefined,
+        pressure: undefined,
+        sunrise: undefined,
+        sunset: undefined,
+        description: undefined,
         error: alert("City not in our database, sorry...")
       })
     } 
